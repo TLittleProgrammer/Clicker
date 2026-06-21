@@ -88,7 +88,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -192,12 +192,12 @@ TextureImporter:
       name: fly_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 87
-        height: 87
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 20
+        y: 25
+        width: 54
+        height: 33
+      alignment: 9
+      pivot: {x: 0.6949879, y: 0.25667432}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -214,12 +214,12 @@ TextureImporter:
       name: fly_1
       rect:
         serializedVersion: 2
-        x: 87
-        y: 0
-        width: 87
-        height: 87
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 106
+        y: 26
+        width: 56
+        height: 29
+      alignment: 9
+      pivot: {x: 0.6878575, y: 0.28920746}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -236,12 +236,12 @@ TextureImporter:
       name: fly_2
       rect:
         serializedVersion: 2
-        x: 174
-        y: 0
-        width: 87
-        height: 87
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 195
+        y: 25
+        width: 56
+        height: 15
+      alignment: 9
+      pivot: {x: 0.65134674, y: 0.62954307}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -258,12 +258,12 @@ TextureImporter:
       name: fly_3
       rect:
         serializedVersion: 2
-        x: 261
-        y: 0
-        width: 87
-        height: 87
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 294
+        y: 16
+        width: 44
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5574604, y: 0.7666524}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -280,12 +280,12 @@ TextureImporter:
       name: fly_4
       rect:
         serializedVersion: 2
-        x: 348
-        y: 0
-        width: 87
-        height: 87
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 379
+        y: 20
+        width: 46
+        height: 20
+      alignment: 9
+      pivot: {x: 0.57474023, y: 0.7189194}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -302,12 +302,12 @@ TextureImporter:
       name: fly_5
       rect:
         serializedVersion: 2
-        x: 435
-        y: 0
-        width: 87
-        height: 87
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 460
+        y: 24
+        width: 54
+        height: 18
+      alignment: 9
+      pivot: {x: 0.6026668, y: 0.5792645}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -324,12 +324,12 @@ TextureImporter:
       name: fly_6
       rect:
         serializedVersion: 2
-        x: 522
-        y: 0
-        width: 87
-        height: 87
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 542
+        y: 27
+        width: 59
+        height: 18
+      alignment: 9
+      pivot: {x: 0.6364136, y: 0.35498345}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -346,12 +346,12 @@ TextureImporter:
       name: fly_7
       rect:
         serializedVersion: 2
-        x: 609
-        y: 0
-        width: 87
-        height: 87
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 624
+        y: 27
+        width: 66
+        height: 23
+      alignment: 9
+      pivot: {x: 0.6441308, y: 0.237004}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -368,12 +368,12 @@ TextureImporter:
       name: fly_8
       rect:
         serializedVersion: 2
-        x: 696
-        y: 0
-        width: 87
-        height: 87
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 710
+        y: 26
+        width: 67
+        height: 31
+      alignment: 9
+      pivot: {x: 0.6496263, y: 0.20622759}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -390,12 +390,12 @@ TextureImporter:
       name: fly_9
       rect:
         serializedVersion: 2
-        x: 783
-        y: 0
-        width: 87
-        height: 87
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 802
+        y: 25
+        width: 49
+        height: 41
+      alignment: 9
+      pivot: {x: 0.78608423, y: 0.18015271}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -412,12 +412,12 @@ TextureImporter:
       name: fly_10
       rect:
         serializedVersion: 2
-        x: 870
-        y: 0
-        width: 87
-        height: 87
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 894
+        y: 25
+        width: 44
+        height: 46
+      alignment: 9
+      pivot: {x: 0.7623527, y: 0.16105212}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -444,7 +444,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":11.0,"y":1.0},"gridSpriteSize":{"x":87.0,"y":87.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       fly_0: 5352286359449648278
       fly_1: 6843129032921346866
