@@ -1,7 +1,5 @@
-using System;
 using Infrastructure.StateMachine;
 using Infrastructure.States;
-using SceneLoad;
 using UnityEngine;
 using GameStateMachine = Infrastructure.StateMachine.StateMachine;
 
@@ -9,37 +7,25 @@ namespace Infrastructure
 {
     public class Bootstrap : MonoBehaviour
     {
+        private ProjectContext _projectContext;
+
         private void Awake()
         {
             DontDestroyOnLoad(gameObject);
-            
+
             var dependencyContainer = new DependencyDictionaryContainer();
             var stateFactory = new StateFactory(dependencyContainer);
             var stateMachine = new GameStateMachine(stateFactory);
+            _projectContext = new ProjectContext(dependencyContainer, stateMachine);
 
-            BindClasses(dependencyContainer);
-            BindStates(dependencyContainer);
+            dependencyContainer.Register(new BindDependenciesState(_projectContext));
             
-            stateMachine.Enter<SceneLoadState, SceneTypes, Action>(SceneTypes.Game, OnSceneLoaded);
+            _projectContext.GameStateMachine.Enter<BindDependenciesState>();
         }
 
-        private void BindClasses(DependencyDictionaryContainer dependencyContainer)
+        private void Update()
         {
-            var sceneLoader = new SceneLoader();
-            
-            dependencyContainer.Register<ISceneLoader>(sceneLoader);
-        }
-
-        private void BindStates(DependencyDictionaryContainer dependencyContainer)
-        {
-            var state = new SceneLoadState(dependencyContainer.Resolve<ISceneLoader>());
-            
-            dependencyContainer.Register(state);
-        }
-
-        private void OnSceneLoaded()
-        {
-            Debug.Log("Scene loaded");
+            _projectContext.GameStateMachine.Tick();
         }
     }
 }
