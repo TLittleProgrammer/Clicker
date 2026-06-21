@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using Data;
 using Data.Enemies;
+using UnityEngine;
 
 namespace Infrastructure.States
 {
@@ -15,7 +16,10 @@ namespace Infrastructure.States
         
         public async void Enter()
         {
-            var instance = (await _gameRules.Game.GameViewPrefab.InstantiateAsync()).GetComponent<GameView>();
+            var gameView = (await _gameRules.Game.GameViewPrefab.InstantiateAsync()).GetComponent<GameView>();
+            var enemy = (await _gameRules.Enemies.Prefab.InstantiateAsync()).GetComponent<EnemyView>();
+
+            gameView.Canvas.worldCamera = Camera.main;
             
         }
 
