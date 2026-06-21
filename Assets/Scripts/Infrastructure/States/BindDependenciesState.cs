@@ -1,4 +1,6 @@
-using System;
+using System.Threading;
+using Infrastructure.ResourcesProvider;
+using Infrastructure.StateMachine;
 using SceneLoad;
 
 namespace Infrastructure.States
@@ -6,6 +8,8 @@ namespace Infrastructure.States
     public class BindDependenciesState : IEnterableState
     {
         private readonly ProjectContext _projectContext;
+
+        private IDependencyContainer DiContainer => _projectContext.DependencyContainer;
 
         public BindDependenciesState(ProjectContext projectContext)
         {
@@ -17,7 +21,7 @@ namespace Infrastructure.States
             BindClasses();
             BindStates();
             
-            _projectContext.GameStateMachine.Enter<SceneLoadState, SceneTypes, Action>(SceneTypes.Game, OnSceneLoaded);
+            _projectContext.GameStateMachine.Enter<ResourcesLoadState>();
         }
 
         public void Exit() { }
@@ -25,20 +29,21 @@ namespace Infrastructure.States
         private void BindClasses()
         {
             var sceneLoader = new SceneLoader();
+            var addressablessProvider = new AddressablessProvider();
             
-            _projectContext.DependencyContainer.Register<ISceneLoader>(sceneLoader);
+            DiContainer.Register<ISceneLoader>(sceneLoader);
+            DiContainer.Register<IResourcesProvider>(addressablessProvider);
         }
 
         private void BindStates()
         {
-            var state = new SceneLoadState(_projectContext.DependencyContainer.Resolve<ISceneLoader>());
+            var sceneLoad = new SceneLoadState(DiContainer.Resolve<ISceneLoader>());
+            var resourcesLoad = new ResourcesLoadState(_projectContext.GameRules, DiContainer.Resolve<IResourcesProvider>(), _projectContext.GameStateMachine);
+            var preparation = new PreparationGameState();
             
-            _projectContext.DependencyContainer.Register(state);
-        }
-
-        private void OnSceneLoaded()
-        {
-            
+            DiContainer.Register(sceneLoad);
+            DiContainer.Register(resourcesLoad);
+            DiContainer.Register(preparation);
         }
     }
 }
