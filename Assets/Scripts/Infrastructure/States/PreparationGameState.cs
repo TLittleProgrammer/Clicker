@@ -1,9 +1,21 @@
+using Cysharp.Threading.Tasks;
+using Data;
+using Data.Enemies;
+
 namespace Infrastructure.States
 {
     public class PreparationGameState : IEnterableState
     {
-        public void Enter()
+        private readonly GameRules _gameRules;
+
+        public PreparationGameState(GameRules gameRules)
         {
+            _gameRules = gameRules;
+        }
+        
+        public async void Enter()
+        {
+            var instance = (await _gameRules.Game.GameViewPrefab.InstantiateAsync()).GetComponent<GameView>();
             
         }
 

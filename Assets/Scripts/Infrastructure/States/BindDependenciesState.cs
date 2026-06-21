@@ -39,7 +39,7 @@ namespace Infrastructure.States
         {
             var sceneLoad = new SceneLoadState(DiContainer.Resolve<ISceneLoader>());
             var resourcesLoad = new ResourcesLoadState(_projectContext.GameRules, DiContainer.Resolve<IResourcesProvider>(), _projectContext.GameStateMachine);
-            var preparation = new PreparationGameState();
+            var preparation = new PreparationGameState(_projectContext.GameRules);
             
             DiContainer.Register(sceneLoad);
             DiContainer.Register(resourcesLoad);

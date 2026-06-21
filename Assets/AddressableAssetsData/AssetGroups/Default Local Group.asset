@@ -14,7 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Default Local Group
   m_GUID: 956875819d1b3b348ae049c7fe450d50
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: cf5c60c432269a646993446302fdd80a
+    m_Address: GameData
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee575d1302058824d9d2150533bb31f1
+    m_Address: GameCanvas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fba13d966a9dd2142a642a1f03e27dcc, type: 2}
   m_SchemaSet:

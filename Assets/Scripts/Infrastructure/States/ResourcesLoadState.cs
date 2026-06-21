@@ -1,9 +1,9 @@
 using System;
 using Data;
 using Data.Enemies;
+using Data.Game;
 using Infrastructure.ResourcesProvider;
 using Infrastructure.StateMachine;
-using UnityEngine;
 
 namespace Infrastructure.States
 {
@@ -23,6 +23,7 @@ namespace Infrastructure.States
         public async void Enter()
         {
             _gameRules.Enemies = await _resourcesProvider.LoadAsset<EnemiesData>(ResourcesConstants.EnemiesDataPath);
+            _gameRules.Game = await _resourcesProvider.LoadAsset<GameData>(ResourcesConstants.GameDataPath);
             
             _stateMachine.Enter<SceneLoadState, SceneTypes, Action>(SceneTypes.Game, OnSceneLoaded);
         }

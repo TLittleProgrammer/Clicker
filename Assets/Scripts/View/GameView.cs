@@ -2,7 +2,8 @@ using UnityEngine;
 
 namespace Data.Enemies
 {
-    public sealed class EnemyView : MonoBehaviour
+    public sealed class GameView : MonoBehaviour
     {
+        
     }
 }
